@@ -51,7 +51,7 @@ double student::getScore()
                 }
                 else
                 {
-                        Grade = total / i;
+                        Grade = total / (grades.size());
                 }
         }
 

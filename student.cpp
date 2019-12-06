@@ -5,9 +5,9 @@
 
 student::student()
 {
-    first = "";
-    last = "";
-    grades.push_back (0);
+        first = "";
+        last = "";
+        grades.push_back(0);
 
 }
 
@@ -32,9 +32,9 @@ void student::addGrade(double grade)
 {
         if (grades[0] == 0)
         {
-            grades.clear();
+                grades.clear();
         }
-    grades.push_back (grade);
+        grades.push_back (grade);
 }
 
 double student::getScore()
@@ -43,8 +43,16 @@ double student::getScore()
         double Grade = 0;
         for (int i=0; i< (grades.size()); i++)
         {
-            total = total + grades[i];
-            Grade = total / i;
+                //cout<<grades[i]<<" total: "<<total<<endl;
+                total = total + grades[i];
+                if ( total == 0)
+                {
+                        Grade = 0;
+                }
+                else
+                {
+                        Grade = total / i;
+                }
         }
 
 
